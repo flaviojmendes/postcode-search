@@ -2,7 +2,6 @@ package com.fexco.postcode.service;
 
 import com.fexco.postcode.consumer.EircodeRestConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
