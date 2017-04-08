@@ -29,4 +29,6 @@ public class Constants{
 
     public static final String RGEO_IE = "/rgeo/ie/";
 
+    public static final String ADDRESS_UK = "/address/uk/";
+
 }

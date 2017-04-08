@@ -45,6 +45,32 @@
                 </file-store>
             </persistence>
         </local-cache>
+        <local-cache name="eircode-rgeo-ie">
+            <persistence passivation="false">
+                <file-store
+                        shared="false"
+                        preload="true"
+                        fetch-state="true"
+                        read-only="false"
+                        purge="false"
+                        path="${java.io.tmpdir}">
+                    <write-behind flush-lock-timeout="15000" thread-pool-size="5" />
+                </file-store>
+            </persistence>
+        </local-cache>
+        <local-cache name="uk-address-ie">
+            <persistence passivation="false">
+                <file-store
+                        shared="false"
+                        preload="true"
+                        fetch-state="true"
+                        read-only="false"
+                        purge="false"
+                        path="${java.io.tmpdir}">
+                    <write-behind flush-lock-timeout="15000" thread-pool-size="5" />
+                </file-store>
+            </persistence>
+        </local-cache>
     </cache-container>
 
 </infinispan>

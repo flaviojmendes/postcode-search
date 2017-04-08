@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * This class builds the URI used to call the postcode REST services.
+ *
  * @author flavio
  */
 public class URIBuilder {
