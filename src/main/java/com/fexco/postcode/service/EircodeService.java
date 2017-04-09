@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  *
- * Service that is responsible to retrieve and manage the Eircode querying.
+ * Service that is responsible to retrieve and manage the Ireland querying.
  *
  * @author flavio
  */

@@ -24,6 +24,4 @@ public class UKService {
         return ukRestConsumer.consumeAddressUk(query, params);
     }
 
-
-
 }

@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.*;
 
 /**
+ * This Class consumes the third-party API to restrieve Ireland post information.
  * @author flavio
  */
 @Component

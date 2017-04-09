@@ -11,6 +11,8 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Map;
 
 /**
+ * This Class consumes the third-party API to restrieve UK post information.
+ *
  * @author flavio
  */
 @Component
