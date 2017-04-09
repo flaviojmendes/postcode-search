@@ -49,7 +49,7 @@ public class EircodeRestConsumer {
 
     @Cacheable("eircode-rgeo-ie")
     public String consumeRgeoIe(Double lat, Double lon, Map<String, String> params) {
-        String url = Constants.API_BASE_URL + constants.getApiKey() + Constants.POSITON_IE + lat + "/" + lon;
+            String url = Constants.API_BASE_URL + constants.getApiKey() + Constants.RGEO_IE + lat + "/" + lon;
         ResponseEntity<String> reponse = restTemplate.getForEntity(URIBuilder.build(url, params), String.class);
 
         return reponse.getBody();
