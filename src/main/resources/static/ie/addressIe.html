@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>FEXCO - Postcode Search by Eircode or Address Fragment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+
+<body ng-app="postcode">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>FEXCO - Postcode Search by Eircode or Address Fragment</h1>
+        </div>
+    </div>
+
+    <form name="postCodeSearch" action="#" ng-controller="PostcodeCtrl" ng-submit="submitFormAddressIe()">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label for="postcode">Postcode</label>
+                    <input type="text"  class="form-control" id="postcode" placeholder="e.g. D02X285" ng-model="postcode">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button type="submit" ngClick="Submit" class="btn btn-primary" style="position: absolute; bottom: 0; margin-bottom: 15px;">Submit</button>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p>Were found {{addresses.length}} addresses.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Address</th>
+                    <th>Organisation</th>
+                    <th>Street</th>
+                    <th>Post Town</th>
+                    <th>County</th>
+                    <th>Postcode</th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="address in addresses">
+
+                <tr>
+                    <td>{{address.summaryline}}</td>
+                    <td>{{address.organisation}}</td>
+                    <td>{{address.street}}</td>
+                    <td>{{address.posttown}}</td>
+                    <td>{{address.county}}</td>
+                    <td>{{address.postcode}}</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </form>
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="../js/postcode.js"></script>
+</body>
+</html>
