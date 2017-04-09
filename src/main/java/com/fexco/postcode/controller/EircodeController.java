@@ -11,7 +11,7 @@ import java.util.Map;
 
 
 /**
- * Controller that provides access to the Eircode API.
+ * Controller that provides access to the Ireland API.
  *
  * @author flavio
  */
