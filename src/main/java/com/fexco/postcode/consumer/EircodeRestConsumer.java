@@ -19,10 +19,12 @@ public class EircodeRestConsumer {
     @Autowired
     private Constants constants;
 
+    @Autowired
+    private RestTemplate restTemplate;
+
+
     @Cacheable("eircode-address-ie")
     public String consumeAddressIe(String query, Map<String, String> params) {
-
-        RestTemplate restTemplate = new RestTemplate();
         String url = Constants.API_BASE_URL + constants.getApiKey() + Constants.ADDRESS_IE + query;
         ResponseEntity<String> reponse = restTemplate.getForEntity(URIBuilder.build(url, params), String.class);
 
@@ -31,8 +33,6 @@ public class EircodeRestConsumer {
 
     @Cacheable("eircode-address-geo")
     public String consumeAddressGeo(String query, Map<String, String> params) {
-
-        RestTemplate restTemplate = new RestTemplate();
         String url = Constants.API_BASE_URL + constants.getApiKey() + Constants.ADDRESS_GEO + query;
         ResponseEntity<String> reponse = restTemplate.getForEntity(URIBuilder.build(url, params), String.class);
 
@@ -41,8 +41,6 @@ public class EircodeRestConsumer {
 
     @Cacheable("eircode-position-ie")
     public String consumePositionIe(String query, Map<String, String> params) {
-
-        RestTemplate restTemplate = new RestTemplate();
         String url = Constants.API_BASE_URL + constants.getApiKey() + Constants.POSITON_IE + query;
         ResponseEntity<String> reponse = restTemplate.getForEntity(URIBuilder.build(url, params), String.class);
 
@@ -51,8 +49,6 @@ public class EircodeRestConsumer {
 
     @Cacheable("eircode-rgeo-ie")
     public String consumeRgeoIe(Double lat, Double lon, Map<String, String> params) {
-
-        RestTemplate restTemplate = new RestTemplate();
         String url = Constants.API_BASE_URL + constants.getApiKey() + Constants.POSITON_IE + lat + "/" + lon;
         ResponseEntity<String> reponse = restTemplate.getForEntity(URIBuilder.build(url, params), String.class);
 
