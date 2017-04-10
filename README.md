@@ -31,6 +31,11 @@ This is a Java application that consumes a third-party service in order to cache
 
 ## How to interact with the Application
 
+### WEB CLIENT
+
+    http://{host}:8080
+
+
 ### REST API
 
 #### Irish Service
