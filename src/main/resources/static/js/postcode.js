@@ -11,7 +11,7 @@ angular.module('postcode', [])
             }).then(function successCallback(response) {
                 $scope.addresses = response.data;
             }, function errorCallback(response) {
-              alert(response);
+              submitFormAddressIe();
             });
         }
 
@@ -25,7 +25,7 @@ angular.module('postcode', [])
             }).then(function successCallback(response) {
                 $scope.addresses = response.data;
             }, function errorCallback(response) {
-              alert(response);
+              submitFormAddressGeo();
             });
         }
 
@@ -39,7 +39,7 @@ angular.module('postcode', [])
          }).then(function successCallback(response) {
              $scope.addresses = response.data;
          }, function errorCallback(response) {
-           alert(response);
+           submitFormPositionIe();
          });
         }
         $scope.submitFormRevGeoIe = function () {
@@ -53,7 +53,7 @@ angular.module('postcode', [])
          }).then(function successCallback(response) {
              $scope.addresses = response.data;
          }, function errorCallback(response) {
-           alert(response);
+           submitFormRevGeoIe();
          });
      }
 
@@ -67,7 +67,7 @@ angular.module('postcode', [])
              }).then(function successCallback(response) {
                  $scope.addresses = response.data;
              }, function errorCallback(response) {
-               alert(response);
+               submitFormAddressUk();
              });
          }
     });
